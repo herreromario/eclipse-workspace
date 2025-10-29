@@ -1,0 +1,47 @@
+package ejemplo;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.Properties;
+import java.util.Scanner;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.dbcp.BasicDataSourceFactory;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		
+		PreparedStatement pstmt = null; // Es la clase conde inyectamos la SQL
+		String sql;
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			Properties propiedades = new Properties();
+			propiedades.load
+			(new FileInputStream("configuracion\\propCiclismo.txt"));
+
+			// Creamos la conexión de DataSource con el fichero propCiclismo.txt
+			
+			DataSource ds = BasicDataSourceFactory.createDataSource(propiedades);
+			
+			// Creo la conexión "con"
+			
+			Connection con = ds.getConnection();
+			System.out.println("CONECTADO");
+			
+			// Leemos la in
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		
+
+	}
+
+}

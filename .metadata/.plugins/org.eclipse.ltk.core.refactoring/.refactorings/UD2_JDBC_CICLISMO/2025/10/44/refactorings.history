@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ejemplo.Ejercicio1&apos; to &apos;Ejercicio1_INSERTAR_MAILLOT&apos;&#x0D;&#x0A;- Original project: &apos;UD2_JDBC_CICLISMO&apos;&#x0D;&#x0A;- Original element: &apos;ejemplo.Ejercicio1&apos;&#x0D;&#x0A;- Renamed element: &apos;ejemplo.Ejercicio1_INSERTAR_MAILLOT&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ejercicio1&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;ejemplo{Ejercicio1.java[Ejercicio1" matchStrategy="1" name="Ejercicio1_INSERTAR_MAILLOT" qualified="false" references="true" similarDeclarations="false" stamp="1761561641836" textual="false" version="1.0"/>
+</session>

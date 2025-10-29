@@ -1,0 +1,26 @@
+package ejemplo;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+
+public class Conectar {
+
+	public static void main(String[] args) {
+		Properties propiedades = new Properties();
+		try {
+			propiedades.load(new FileInputStream("configuracion\\propCiclism.txt"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+	}
+
+}

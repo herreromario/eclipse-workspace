@@ -1,0 +1,94 @@
+package ejemplo;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Properties;
+import java.util.Scanner;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.dbcp.BasicDataSourceFactory;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		// 3. Obtener la ciudad de salida de las etapas
+		// que han ganado ciclistas del equipo que introduzca el usuario
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String sql = null;
+		ResultSet rs = null;
+		
+		// ENTRADA DE DATOS
+		
+		String vequipo = null;
+		
+		// SALIDA DE DATOS
+		
+		String vciudad = null;
+		
+		// LEER VALORES DE ENTRADA
+		
+		// LEER VALORES DE LA INTERFAZ
+				
+		Scanner sc = new Scanner(System.in);
+		System.out.println("EQUIPO");
+		vequipo = sc.nextLine();
+		
+		// Parte de datos (DAO)
+		
+		try {
+			Properties propiedades = new Properties();
+			propiedades.load
+			(new FileInputStream("configuracion\\propCiclismo.txt"));
+
+			// Creamos la conexión de DataSource con el fichero propCiclismo.txt
+					
+			DataSource ds = BasicDataSourceFactory.createDataSource(propiedades);
+					
+			con = ds.getConnection();
+			
+			// Operacion consulta
+			
+			sql = "SELECT e.salida FROM cliclista c"
+					+ " JOIN etapa e ON c.dorsal = e.dorsal "
+					+ "WHERE c.nomeq = ?";
+			
+			// Inyectamos la sql en el preparedStatement
+			
+			pstmt = con.prepareStatement(sql);
+			
+			// Asignamos valor a los ? (empieza por el 1)
+			
+			pstmt.setString(1, vciudad);
+			
+			// Ejecutamos el insert
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				vciudad = rs.getString("salida");
+				
+				// Interfaz valores salida
+				System.out.println("Ciudad de salida - " + vciudad);
+			}
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
