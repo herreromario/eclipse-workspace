@@ -55,7 +55,7 @@ public class Ejercicio3 {
 			
 			// Operacion consulta
 			
-			sql = "SELECT e.salida FROM cliclista c"
+			sql = "SELECT salida FROM ciclista c"
 					+ " JOIN etapa e ON c.dorsal = e.dorsal "
 					+ "WHERE c.nomeq = ?";
 			
@@ -65,7 +65,7 @@ public class Ejercicio3 {
 			
 			// Asignamos valor a los ? (empieza por el 1)
 			
-			pstmt.setString(1, vciudad);
+			pstmt.setString(1, vequipo);
 			
 			// Ejecutamos el insert
 			

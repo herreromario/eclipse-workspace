@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\windows10\eclipse-workspace\UD2_JDBC_CICLISMO\src\main\java\ejemplo\Ejercicio6.java"/>
 			<item value="C:\Users\windows10\eclipse-workspace\UD1B_JSON\src\main\java\pojo\FootballPlayer.java"/>
 			<item value="C:\Users\windows10\eclipse-workspace\UD1_MongoBiblioteca\src\main\java\EJERCICIO_1\FiltrosBiblioteca.java"/>
 		</list>
@@ -50,6 +51,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="UD2_MVC_INVENTARIO"/>
 			<item value="UD2_JDBC_CICLISMO"/>
 			<item value="UD1B_JSON"/>
 			<item value="UD1_MongoBiblioteca"/>
